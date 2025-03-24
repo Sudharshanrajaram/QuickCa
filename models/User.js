@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
-    _id:{
+    _id: {
         type: String,
         required: true
     },
@@ -9,20 +9,20 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    email:{
+    email: {
         type: String,
         required: true
     },
-    imageUrl:{
+    imageUrl: { 
         type: String,
         required: true
     },
-    cartItems:{
+    cartItems: {
         type: Object,
         default: {}
     }
-}, {minimize: false});
+}, { minimize: false });
 
-const User = mongoose.models.User || mongoose.model('user', userSchema);
+const User = mongoose.models.User || mongoose.model('User', userSchema); 
 
 export default User;
