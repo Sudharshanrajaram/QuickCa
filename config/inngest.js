@@ -44,7 +44,7 @@ export const syncUserUpdation = inngest.createFunction(
     }
 )
 
-async const syncUserDeleteion = inngest.createFunction(
+export const syncUserDeleteion = inngest.createFunction(
     {
         id: "delete-user-from-clerk"
     },
@@ -54,7 +54,7 @@ async const syncUserDeleteion = inngest.createFunction(
     async( { event }) => {
         const { id } = event.data;
 
-        await connectDB():
+        await connectDB();
         await findByIdAndDelete(id);
     }
 )
